@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    tools:context=".Fragments.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@font/goldman"
+            android:text="HOME"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/yumyard_logo"
+            app:tint="@color/primary" />
+
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What would you like to eat"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/goldman"
+            android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:elevation="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:background="@drawable/image_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/randomImage"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <TextView
+                    android:id="@+id/randomMealName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="_ _ _ _ _ _"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/goldman"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_gravity="bottom"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <link.fls.swipestack.SwipeStack
+            android:id="@+id/swipeStack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginHorizontal="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our popular items"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/goldman"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:id="@+id/rvPopuralItems"
+            android:orientation="horizontal"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="15"
+            app:shimmer_demo_grid_child_count="1"
+            app:shimmer_demo_layout="@layout/popular_items_loader"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/goldman"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"/>
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:id="@+id/rvCategories"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="15"
+            app:shimmer_demo_grid_child_count="1"
+            app:shimmer_demo_layout="@layout/category_items_loader"/>
+
+    </LinearLayout>
+</ScrollView>

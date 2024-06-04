@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical"
+    tools:context=".Activities.SpecificCategoryActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/back_icon"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:tint="@color/myDarkGrey" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Meal Name"
+            android:gravity="center"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_28sdp"
+            android:fontFamily="@font/goldman"
+            android:paddingTop="@dimen/_4sdp"
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/myDarkGrey"/>
+
+    </Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMeals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_6sdp"/>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/drawerOneFragment"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Drawer One" />
+        <item
+            android:id="@+id/drawerTwoFragment"
+            android:icon="@drawable/baseline_add_circle_outline_24"
+            android:title="Drawer Two" />
+        <item
+            android:id="@+id/drawerThreeFragment"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Drawer Three" />
+
+        <item
+            android:id="@+id/drawerFourFragment"
+            android:icon="@drawable/ic_baseline_adb_24"
+            android:title="Drawer Four" />
+    </group>
+
+</menu>
